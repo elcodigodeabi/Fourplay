@@ -1,0 +1,256 @@
+:root{
+	--fondo-container: #332E59;
+	--border-container: 12px;
+	--font-size-1:12px;
+	--font-size-2:14px;
+	--border-color: #4D458A;
+	/*form*/
+	--background-input: #272344;
+	/*botones*/
+	--button-sky-blue: #2678d6;
+	--button-sky-blue-hover: #3ea6ff;
+	--button-blue: #6a67f3;
+	--button-blue-hover: #504dca;
+	--button-red: #fc7785;
+	--button-red-hover: #d95b69;
+	--button-violet: #7B17FF;
+	--button-violet-hover: #4C00A6;
+	--button-icon: transparent;
+	--button-icon-hover: #4a4a67;
+}
+
+body{
+	background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+	width: 100%;
+	min-height: 100vh;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+*{
+	font-family: 'Poppins';
+	color: white;
+}
+.nav-admin{
+	background: var(--background-input);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: .5rem 2rem;
+	gap: 1rem;
+	box-sizing: border-box;
+	font-size: var(--font-size-2);
+}
+
+a{
+	text-decoration: none;
+}
+
+.titulo-principal{
+	margin: 24px 0 0 0;
+}
+
+.form{
+	margin: 24px;
+}
+
+.button{
+	border: none;
+	border-radius: 8px;
+	padding: 7px 13.3px;
+	font-size: var(--font-size-2);
+}
+
+.buscador{
+	background: var(--background-input);
+	border: 1px solid var(--border-color);
+	border-radius: calc(var(--border-container)/2);
+	padding: 7px 13.3px;
+	width: 225px;
+}
+
+/*tablas*/
+
+.tablas{
+	background: var(--fondo-container);
+	padding: 10px 20px;
+	border-radius: var(--border-container);
+	margin: 0 24px 24px;
+}
+
+.tablas th{
+	font-size: var(--font-size-2);
+	background: var(--background-input);
+	min-width: 50px;
+	border: 1px solid var(--border-color);
+	padding: 7px 13.3px;
+}
+
+.tablas td{
+	font-size: var(--font-size-2);
+	padding: 7px 13.3px;
+}
+
+.registros{
+	background: var(--button-icon);
+}
+
+.registros:hover{
+	background: var(--button-icon-hover);
+}
+
+.reg-cat td{
+	height: 34px;
+}
+
+/*tarjetas*/
+
+.container-juegos{
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	width: 100%;
+	padding: 0 2rem;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+}
+
+.tarjeta-juegos{
+	display: flex;
+	flex-direction: column;
+	width: 225px;
+}
+
+.tarjeta-juegos__imagen{
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	image-rendering: auto;
+}
+
+.tarjeta-juegos__nombre, .tarjeta-juegos__descripcion{
+	font-size: var(--font-size-2);
+	padding: 7px 13.3px;
+}
+
+.tarjeta-juegos__descripcion{
+	display: inline-block;
+	height: 100px;
+}
+
+/*formularios*/
+
+.form-data{
+	width: 468px;
+	box-sizing: border-box;
+	padding: 24px;
+	background: var(--fondo-container);
+	border-radius: var(--border-container);
+}
+.form-data label{
+	font-size: var(--font-size-2);
+}
+.form-data .entrada, .form-data select, .form-data textarea{
+	font-size: var(--font-size-2);
+	display: block;
+	width: 100%;
+	padding: 7px;
+	box-sizing: border-box;
+	background: var(--background-input);
+	border: 1px solid var(--border-container);
+	border-radius: calc(var(--border-container)/2);
+}
+
+.form-data textarea{
+	height: 100px;
+}
+
+.button-input{
+	margin-top: 7px;
+	width: 100%;
+}
+
+/*botones y hover*/
+
+.button-blue{
+	background: var(--button-blue);
+	transition: background 0.1s ease;
+	cursor: pointer;
+}
+.button-blue:hover{
+	background: var(--button-blue-hover);
+}
+
+.button-red{
+	background: var(--button-red);
+	transition: background 0.1s ease;
+	cursor: pointer;
+}
+.button-red:hover{
+	background: var(--button-red-hover);
+}
+
+.button-sky-blue{
+	background: var(--button-sky-blue);
+	transition: background 0.1s ease;
+	cursor: pointer;
+}
+.button-sky-blue:hover{
+	background: var(--button-sky-blue-hover);
+}
+
+.button-violet{
+	background: var(--button-violet);
+	transition: background 0.1s ease;
+	cursor: pointer;
+}
+.button-violet:hover{
+	background: var(--button-violet-hover);
+}
+
+.button-icon{
+	background: var(--button-icon);
+	transition: background 0.1s ease;
+	cursor: pointer;
+}
+.button-icon:hover{
+	background: var(--button-icon-hover);
+}
+
+/*tarjeta-errores*/
+
+.tarjeta-errores{
+	position: fixed;
+	right: 16px;
+	bottom: 16px;
+	background: var(--fondo-container);
+	min-width: 400px;
+	max-width: 500px;
+	padding: 16px;
+	border-radius: var(--border-container);
+	border: 1px solid var(--border-color);
+}
+
+.tarjeta-errores__icon{
+	position: absolute;
+	top: -1.5rem;
+	right: 1rem;
+}
+
+.icono-confirmacion{
+	width: 48px;
+	height: 48px;
+}
+
+.tarjeta-errores__text{
+	margin: 0;
+	font-size: 14px;
+}
+
+.opcion-reporte{
+	width: auto;
+}
